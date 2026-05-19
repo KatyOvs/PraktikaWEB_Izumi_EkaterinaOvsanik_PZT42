@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izumi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarMain" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+<header class="header">
+    <div class="header__line header__line--top"></div>
+    <div class="header__container">
+       
+        <div class="header__top">
+            <div class="header__search">
+                <input type="text" placeholder="Поиск" class="header__search-input">
+                <button class="header__search-btn" aria-label="Искать">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+            <div class="header__icons">
+                <div class="dropdown d-inline-block">
+                    <button class="header__icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="img/auth.png" alt="Профиль">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Личный кабинет</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-seam me-2"></i>Мои заказы</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Выйти</a></li>
+                    </ul>
+                </div>
+               <!--  Popover -->
+<button class="header__icon-btn position-relative" id="favoritesPopover" 
+        data-bs-toggle="popover" 
+        data-bs-placement="bottom" 
+        data-bs-content="Здесь хранятся выбранные вами товары. Добавляйте понравившиеся позиции в избранное!"
+        data-bs-title="Избранное">
+    <img src="img/fav.png" alt="Избранное">
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">3</span>
+</button>
+                <button class="header__icon-btn position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                    <img src="img/cart.png" alt="Корзина">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">2</span>
+                </button>
+            </div>
+        </div>
+
+       
+        <div class="header__logo">
+            <a href="#">
+                <img src="img/logo.png" alt="Izumi">
+            </a>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg header__navbar">
+            <div class="container-fluid p-0">
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav">
+                       
+                        <div class="nav-group-left">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#designs" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Все дизайны иллюстраций">Каталог дизайнов</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#catalog" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Вся наша продукция">Каталог продукции</a>
+                            </li>
+                        </div>
+                       
+                        <div class="nav-group-right">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#onas" data-bs-toggle="tooltip" data-bs-placement="bottom" title="История нашей компании">О нас</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#oplata" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Условия доставки и оплаты">Оплата и доставка</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#feedback-popup">Обратная связь</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<main>
+    <!-- КАРУСЕЛЬ -->
+    <div class="services__carousel">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-slide" style="background-image: url('img/slide1.jpg');">
+                        <div class="carousel__content">
+                            <h2 class="carousel__title">Набор именной посуды для девочки</h2>
+                            <ul class="carousel__list">
+                                <li>детский термос</li>
+                                <li>тарелка</li>
+                                <li>кружка</li>
+                                <li>ланч-бокс</li>
+                            </ul>
+                            <button class="carousel__btn">Соберите свой набор</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-slide" style="background-image: url('img/slide2.jpg');">
+                        <div class="carousel__content">
+                            <h2 class="carousel__title">Персонализированные подарки</h2>
+                            <ul class="carousel__list">
+                                <li>именные кружки</li>
+                                <li>тарелки с дизайном</li>
+                                <li>термосы с гравировкой</li>
+                            </ul>
+                            <button class="carousel__btn">Выбрать подарок</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-slide" style="background-image: url('img/slide3.jpg');">
+                        <div class="carousel__content">
+                            <h2 class="carousel__title">Уникальные дизайны</h2>
+                            <ul class="carousel__list">
+                                <li>для детей и взрослых</li>
+                                <li>любые фразы</li>
+                                <li>индивидуальный подход</li>
+                            </ul>
+                            <button class="carousel__btn">Смотреть дизайны</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ИНФО БЛОК -->
+    <div class="services__info">
+        <div class="container">
+            <h1 class="services__heading">Создаем изумительные вещи</h1>
+            <div class="row justify-content-center gy-4">
+                <div class="col-md-6">
+                    <ul class="services__list">
+                        <li>Продаём термосы, керамическую посуду, металлические и другие изделия с печатью наших иллюстраций</li>
+                        <li>В любой наш дизайн можно добавить имя или инициалы</li>
+                        <li>К выбранной иллюстрации можно добавить любую фразу из нашего каталога. Фраза также может быть самостоятельным дизайном, без иллюстрации</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="services__list">
+                        <li>Каждый дизайн можно нанести на любую нашу продукцию (кружки, тарелки, ланч-боксы, спортивные бутылки и др.)</li>
+                        <li>Разрабатываем индивидуальный дизайн за дополнительную плату</li>
+                        <li>Выбирайте для себя или в подарок, дарите не просто полезные вещи, но и приятные эмоции</li>
+                    </ul>
+                </div>
+
+                 <div class="progress" style="height: 8px;">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 99%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p class="text-center text-muted small mt-2">99,9% клиентов остаются довольны заказами</p>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- НОВИНКИ -->
+    <section class="products">
+        <div class="container">
+            <div class="products__header">
+                <h2 class="products__heading">Новинки</h2>
+                <div class="products__arrows">
+                    <button class="products__arrow">‹</button>
+                    <span class="products__dots">
+                        <span class="products__dot active"></span>
+                        <span class="products__dot"></span>
+                        <span class="products__dot"></span>
+                    </span>
+                    <button class="products__arrow">›</button>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="product-card">
+                        <div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div>
+                        <div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div>
+                        <div class="product-card__info">
+                            <div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div>
+                            <p class="product-card__desc">Краткое описание</p>
+                            <p class="product-card__price">1 200 ₽</p>
+                            <button class="btn btn-sm btn-outline-primary mt-2 w-100" data-bs-toggle="modal" data-bs-target="#productModal">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="product-card">
+                        <div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div>
+                        <div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div>
+                        <div class="product-card__info">
+                            <div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div>
+                            <p class="product-card__desc">Краткое описание</p>
+                            <p class="product-card__price">1 200 ₽</p>
+                            <button class="btn btn-sm btn-outline-primary mt-2 w-100" data-bs-toggle="modal" data-bs-target="#productModal">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="product-card">
+                        <div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div>
+                        <div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div>
+                        <div class="product-card__info">
+                            <div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div>
+                            <p class="product-card__desc">Краткое описание</p>
+                            <p class="product-card__price">1 200 ₽</p>
+                            <button class="btn btn-sm btn-outline-primary mt-2 w-100" data-bs-toggle="modal" data-bs-target="#productModal">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="product-card">
+                        <div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div>
+                        <div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div>
+                        <div class="product-card__info">
+                            <div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div>
+                            <p class="product-card__desc">Краткое описание</p>
+                            <p class="product-card__price">1 200 ₽</p>
+                            <button class="btn btn-sm btn-outline-primary mt-2 w-100" data-bs-toggle="modal" data-bs-target="#productModal">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="product-card">
+                        <div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div>
+                        <div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div>
+                        <div class="product-card__info">
+                            <div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div>
+                            <p class="product-card__desc">Краткое описание</p>
+                            <p class="product-card__price">1 200 ₽</p>
+                            <button class="btn btn-sm btn-outline-primary mt-2 w-100" data-bs-toggle="modal" data-bs-target="#productModal">Быстрый просмотр</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОПУЛЯРНОЕ -->
+    <section class="products">
+        <div class="container">
+            <div class="products__header">
+                <h2 class="products__heading">Популярное</h2>
+                <div class="products__arrows">
+                    <button class="products__arrow">‹</button>
+                    <span class="products__dots"><span class="products__dot active"></span><span class="products__dot"></span><span class="products__dot"></span></span>
+                    <button class="products__arrow">›</button>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div><p class="product-card__desc">Краткое описание</p><p class="product-card__price">1 200 ₽</p></div></div></div>
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div><p class="product-card__desc">Краткое описание</p><p class="product-card__price">1 200 ₽</p></div></div></div>
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div><p class="product-card__desc">Краткое описание</p><p class="product-card__price">1 200 ₽</p></div></div></div>
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div><p class="product-card__desc">Краткое описание</p><p class="product-card__price">1 200 ₽</p></div></div></div>
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div><p class="product-card__desc">Краткое описание</p><p class="product-card__price">1 200 ₽</p></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРОДУКЦИЯ -->
+    <section id="catalog" class="products">
+        <div class="container">
+            <div class="products__header">
+                <h2 class="products__heading">Наша продукция</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div><p class="product-card__desc">Краткое описание</p><p class="product-card__price">1 200 ₽</p></div></div></div>
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div><p class="product-card__desc">Краткое описание</p><p class="product-card__price">1 200 ₽</p></div></div></div>
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div><p class="product-card__desc">Краткое описание</p><p class="product-card__price">1 200 ₽</p></div></div></div>
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div><p class="product-card__desc">Краткое описание</p><p class="product-card__price">1 200 ₽</p></div></div></div>
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/product.jpg" alt="Товар"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название товара</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div><p class="product-card__desc">Краткое описание</p><p class="product-card__price">1 200 ₽</p></div></div></div>
+            </div>
+            <div class="products__more">
+                <button class="products__more-btn">Посмотреть все изделия<span class="products__more-arrow">▼</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ДЕТСКИЕ ДИЗАЙНЫ -->
+    <section id="designs" class="designs">
+        <div class="container">
+            <div class="products__header">
+                <h2 class="products__heading">Детские дизайны</h2>
+                <div class="products__arrows">
+                    <button class="products__arrow">‹</button>
+                    <span class="products__dots"><span class="products__dot active"></span><span class="products__dot"></span><span class="products__dot"></span></span>
+                    <button class="products__arrow">›</button>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/kiddesign.jpg" alt="Дизайн"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название дизайна</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div></div></div></div>
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/kiddesign.jpg" alt="Дизайн"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название дизайна</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div></div></div></div>
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/kiddesign.jpg" alt="Дизайн"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название дизайна</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div></div></div></div>
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/kiddesign.jpg" alt="Дизайн"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название дизайна</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div></div></div></div>
+                <div class="col-lg-2 col-md-4 col-6"><div class="product-card"><div class="product-card__image"><img src="img/kiddesign.jpg" alt="Дизайн"></div><div class="product-card__dots"><span class="product-card__dot active"></span><span class="product-card__dot"></span></div><div class="product-card__info"><div class="product-card__name-row"><p class="product-card__name">Название дизайна</p><button class="product-card__fav"><img src="img/fav.png" alt=""></button></div></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- С ЧЕГО НАЧАТЬ -->
+    <section class="howtobegin">
+        <div class="container">
+            <h2 class="howtobegin__heading">С чего начать?</h2>
+            
+            <div class="row align-items-center justify-content-center gy-4 mb-5">
+                <div class="col-md-4 text-center text-md-start">
+                    <p class="howtobegin__intro">Если вы уже...</p>
+                    <div class="howtobegin__box">
+                        <p class="howtobegin__subtitle howtobegin__subtitle--bold">выбрали изделие</p>
+                        <p class="howtobegin__desc">и теперь хотите подобрать к нему иллюстрацию</p>
+                    </div>
+                </div>
+                <div class="col-auto d-none d-md-block">
+                    <div class="howtobegin__arrow">
+                        <span class="howtobegin__dots"><span class="howtobegin__dot"></span><span class="howtobegin__dot"></span></span>
+                        <span class="howtobegin__pointer">›</span>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="howtobegin__image"><img src="img/productcircle.png" alt="Продукция"></div>
+                </div>
+                <div class="col-auto d-none d-md-block">
+                    <div class="howtobegin__arrow">
+                        <span class="howtobegin__dots"><span class="howtobegin__dot"></span><span class="howtobegin__dot"></span></span>
+                        <span class="howtobegin__pointer">›</span>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="howtobegin__action"><button class="howtobegin__btn">Вам в каталог продукции</button></div>
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-center gy-4">
+                <div class="col-md-4 text-center text-md-start">
+                    <p class="howtobegin__intro">Или вы сначала...</p>
+                    <div class="howtobegin__box">
+                        <p class="howtobegin__subtitle howtobegin__subtitle--bold">выбрали иллюстрацию</p>
+                        <p class="howtobegin__desc">и хотите посмотреть, как она выглядит на разных изделиях или вам нужно собрать целый набор</p>
+                    </div>
+                </div>
+                <div class="col-auto d-none d-md-block">
+                    <div class="howtobegin__arrow">
+                        <span class="howtobegin__dots"><span class="howtobegin__dot"></span><span class="howtobegin__dot"></span></span>
+                        <span class="howtobegin__pointer">›</span>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="howtobegin__image"><img src="img/designcircle.png" alt="Дизайны"></div>
+                </div>
+                <div class="col-auto d-none d-md-block">
+                    <div class="howtobegin__arrow">
+                        <span class="howtobegin__dots"><span class="howtobegin__dot"></span><span class="howtobegin__dot"></span></span>
+                        <span class="howtobegin__pointer">›</span>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="howtobegin__action"><button class="howtobegin__btn">Вам в каталог дизайнов</button></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- АККОРДЕОН FAQ -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Часто задаваемые вопросы</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    Как долго изготавливается заказ?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Стандартный срок изготовления заказа составляет <strong>3-5 рабочих дней</strong>. Срочные заказы выполняются за 1-2 дня.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Можно ли вернуть товар с индивидуальным дизайном?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Товары с индивидуальным дизайном возврату и обмену не подлежат, если они не имеют фабричных дефектов.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Есть ли скидки для оптовых заказов?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Да! Для заказов от 10 000 ₽ - скидка 5%, от 20 000 ₽ - 10%, от 50 000 ₽ - 15%.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section id="onas" class="instagram">
+        <div class="container">
+            <h2 class="instagram__heading">Мы в Instagram</h2>
+            <div class="instagram__grid">
+                <div class="instagram__item instagram__item--1"><img src="img/img1.png" alt="Instagram"></div>
+                <div class="instagram__item instagram__item--2"><img src="img/img2.png" alt="Instagram"></div>
+                <div class="instagram__item instagram__item--3"><img src="img/img3.png" alt="Instagram"></div>
+                <div class="instagram__item instagram__item--5"><img src="img/img5.png" alt="Instagram"></div>
+                <div class="instagram__item instagram__item--6"><img src="img/img6.png" alt="Instagram"></div>
+                <div class="instagram__center">
+                    <div class="instagram__logo"><img src="img/instlogo.png" alt="Instagram"></div>
+                    <p class="instagram__text">Подписывайтесь<br><a href="https://instagram.com/izumi_market" target="_blank" class="instagram__link">@izumi_market</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- КОРЗИНА OFFСANVAS -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+    <div class="offcanvas-header bg-primary text-white">
+        <h3 class="offcanvas-title"><i class="bi bi-cart"></i> Корзина</h3>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="cart-item d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+            <div><strong>Кружка именная</strong><div class="text-muted small">1 200 ₽ x 1</div></div>
+            <button class="btn btn-sm btn-outline-danger">Удалить</button>
+        </div>
+        <div class="cart-item d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+            <div><strong>Термос детский</strong><div class="text-muted small">2 500 ₽ x 1</div></div>
+            <button class="btn btn-sm btn-outline-danger">Удалить</button>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between mb-3"><strong>Итого:</strong><strong>3 700 ₽</strong></div>
+        <button class="btn btn-primary w-100">Оформить заказ</button>
+    </div>
+</div>
+
+<!-- МОДАЛКА БЫСТРОГО ПРОСМОТРА -->
+<div class="modal fade" id="productModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h3 class="modal-title">Быстрый просмотр</h3>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="img/product.jpg" alt="Товар" class="img-fluid mb-3" style="max-height: 200px;">
+                <h4>Кружка именная</h4>
+                <p class="text-muted">Керамическая кружка 350 мл с авторским дизайном. Можно добавить любое имя или фразу.</p>
+                <p class="h3 text-primary">1 200 ₽</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary" onclick="showAddToCartToast()">Добавить в корзину</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ТОСТ уведомление -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;">
+    <div id="addToCartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="3000">
+        <div class="toast-header bg-primary text-white">
+            <i class="bi bi-cart-check me-2"></i>
+            <strong class="me-auto">Izumi Маркет</strong>
+            <small>только что</small>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            Товар успешно добавлен в корзину!
+        </div>
+    </div>
+</div>
+<!-- ПОДВАЛ -->
+<footer class="footer">
+    <div class="footer__strip">
+        <div class="footer__strip-inner">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+        </div>
+    </div>
+    <div class="footer__main">
+        <div class="footer__container">
+            <div class="footer__logo">
+                <a href="#"><img src="img/izumilog.png" alt="Izumi"></a>
+            </div>
+            <div class="footer__columns">
+                <div class="footer__column">
+                    <h2 class="footer__column-title">Каталог дизайнов</h2>
+                    <ul class="footer__list"><li><a href="#">Для девочек</a></li><li><a href="#">Для женщин</a></li><li><a href="#">Для мужчин</a></li><li><a href="#">Для взрослых универсальные</a></li></ul>
+                    <p class="footer__copyright">© Интернет-магазин Izumi-маркет</p>
+                </div>
+                <div class="footer__column">
+                    <h2 class="footer__column-title">Каталог продукции</h2>
+                    <ul class="footer__list"><li><a href="#">Термосы</a></li><li><a href="#">Керамика</a></li><li><a href="#">Пластик</a></li><li><a href="#">Металлоизделия</a></li><li><a href="#">Текстиль</a></li></ul>
+                    <a href="#" class="footer__policy">Политика конфиденциальности</a>
+                </div>
+                <div class="footer__column">
+                    <h2 class="footer__column-title">Информация</h2>
+                    <ul class="footer__list"><li><a href="#">О компании</a></li><li><a href="#">Сертификаты</a></li><li><a href="#">Оплата и доставка</a></li><li><a href="#">Контакты</a></li></ul>
+                    <a href="#" class="footer__terms">Пользовательское соглашение</a>
+                </div>
+                <div class="footer__column">
+                    <h2 class="footer__column-title">Мы в соцсетях</h2>
+                    <ul class="footer__list"><li><a href="#">Instagram</a></li><li><a href="#">ВКонтакте</a></li></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- POPUP ОБРАТНОЙ СВЯЗИ -->
+<div id="feedback-popup" class="feedback-popup">
+    <div class="feedback-popup__content">
+        <a href="#" class="feedback-popup__close">&times;</a>
+        <div class="feedback-popup__header">
+            <h3 class="feedback-popup__title">Обратная связь</h3>
+            <p class="feedback-popup__subtitle">Напишите нам, и мы обязательно ответим</p>
+        </div>
+        <form class="feedback-popup__form">
+            <div class="feedback-popup__field"><input type="text" placeholder="Ваше имя" required></div>
+            <div class="feedback-popup__field"><input type="email" placeholder="Email для ответа" required></div>
+            <div class="feedback-popup__field"><select required><option value="" disabled selected>Тема обращения</option><option>Заказ и доставка</option><option>Вопрос о товаре</option><option>Дизайн и персонализация</option><option>Сотрудничество</option><option>Другое</option></select></div>
+            <div class="feedback-popup__field"><textarea rows="4" placeholder="Ваше сообщение..." required></textarea></div>
+            <label class="feedback-popup__checkbox"><input type="checkbox" required><span>Я согласен с <a href="#">политикой обработки данных</a></span></label>
+            <button type="submit" class="feedback-popup__submit">Отправить сообщение</button>
+        </form>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        tooltipTriggerList.forEach(function(tooltipTriggerEl) {
+            new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        
+        // Popover (новый виджет)
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        popoverTriggerList.forEach(function(popoverTriggerEl) {
+            new bootstrap.Popover(popoverTriggerEl, {
+                trigger: 'hover' // срабатывает при наведении
+            })
+        })
+        
+        // Toast
+        var toastEl = document.getElementById('addToCartToast')
+        if (toastEl) {
+            window.cartToast = new bootstrap.Toast(toastEl, {
+                autohide: true,
+                delay: 3000
+            })
+        }
+    })
+    
+    // Функция для показа Toast (добавьте на кнопки "В корзину")
+    function showAddToCartToast() {
+        if (window.cartToast) {
+            window.cartToast.show()
+        }
+        // Обновляем счетчик корзины
+        var cartCount = document.querySelector('[data-bs-target="#cartOffcanvas"] .badge')
+        if (cartCount) {
+            var current = parseInt(cartCount.innerText) || 0
+            cartCount.innerText = current + 1
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izumi</title>
+    <meta name="description" content="Именная посуда, термосы, кружки, тарелки с дизайном на заказ. Подарки для детей, женщин и мужчин.">
+<meta name="keywords" content="именная посуда, термос, кружка, подарок, дизайн на заказ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__line header__line--top"></div>
+        <div class="header__container">
+            <div class="header__top">
+                <div class="header__search">
+                    <input type="text" placeholder="Поиск" class="header__search-input">
+                    <button class="header__search-btn" aria-label="Искать">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="M21 21l-4.35-4.35"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header__icons">
+    <button class="header__icon-btn" aria-label="Профиль">
+        <img src="img/auth.png" alt="Профиль" class="header__icon-img header__icon-img--profile">
+    </button>
+    <button class="header__icon-btn" aria-label="Избранное">
+        <img src="img/fav.png" alt="Избранное" class="header__icon-img header__icon-img--fav">
+    </button>
+    <button class="header__icon-btn" aria-label="Корзина">
+        <img src="img/cart.png" alt="Корзина" class="header__icon-img header__icon-img--cart">
+    </button>
+</div>
+            </div>
+            <div class="header__logo">
+               <a href="#">
+        <img src="img/logo.png" alt="Izumi" width="157" height="104">
+    </a>
+            </div>
+             <input type="checkbox" id="burger-toggle" class="header__burger-toggle">
+        <label for="burger-toggle" class="header__burger">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+        </label>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li><a href="#designs">Каталог дизайнов</a></li>
+                    <li><a href="#catalog">Каталог продукции</a></li>
+                    <li class="header__menu-spacer"></li>
+                    <li><a href="#onas">О нас</a></li>
+                    <li><a href="#oplata">Оплата и доставка</a></li>
+                    <li><a href="#feedback-popup">Обратная связь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+    <div class="services__carousel">
+        <input type="radio" name="carousel" id="carousel1" class="carousel__radio" checked>
+        <input type="radio" name="carousel" id="carousel2" class="carousel__radio">
+        <input type="radio" name="carousel" id="carousel3" class="carousel__radio">
+        
+        <div class="carousel__slide">
+            <div class="carousel__content">
+                <h2 class="carousel__title">Набор именной посуды для девочки</h2>
+                <ul class="carousel__list">
+                    <li>детский термос</li>
+                    <li>тарелка</li>
+                    <li>кружка</li>
+                    <li>ланч-бокс</li>
+                </ul>
+                <button class="carousel__btn">Соберите свой набор</button>
+            </div>
+        </div>
+        
+        <div class="carousel__dots">
+            <label for="carousel1" class="carousel__dot"></label>
+            <label for="carousel2" class="carousel__dot"></label>
+            <label for="carousel3" class="carousel__dot"></label>
+        </div>
+    </div>
+
+    <div class="services__info">
+        <h1 class="services__heading">Создаем изумительные вещи</h1>
+        <div class="services__columns">
+            <ul class="services__list">
+                <li>Продаём термосы, керамическую посуду, металлические и другие изделия с печатью наших иллюстраций</li>
+                <li>В любой наш дизайн можно добавить имя или инициалы</li>
+                <li>К выбранной иллюстрации можно добавить любую фразу из нашего каталога. Фраза также может быть самостоятельным дизайном, без иллюстрации</li>
+            </ul>
+            <ul class="services__list">
+                <li>Каждый дизайн можно нанести на любую нашу продукцию (кружки, тарелки, ланч-боксы, спортивные бутылки и др.)</li>
+                <li>Разрабатываем индивидуальный дизайн за дополнительную плату</li>
+                <li>Выбирайте для себя или в подарок, дарите не просто полезные вещи, но и приятные эмоции</li>
+            </ul>
+        </div>
+    </div>
+</main>
+<!-- 3. НОВИНКИ -->
+<section class="products">
+    <div class="products__container">
+        <div class="products__header">
+            <h2 class="products__heading">Новинки</h2>
+            <div class="products__arrows">
+                <button class="products__arrow" aria-label="Назад">‹</button>
+                <span class="products__dots">
+                    <span class="products__dot active"></span>
+                    <span class="products__dot"></span>
+                    <span class="products__dot"></span>
+                </span>
+                <button class="products__arrow" aria-label="Вперёд">›</button>
+            </div>
+        </div>
+
+        <div class="products__grid">
+            <!-- Карточка 1 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар 1">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар 2">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар 3">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар 4">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <!-- Карточка 5 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар 5">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 4. ПОПУЛЯРНОЕ -->
+
+<section class="products">
+    <div class="products__container">
+        <div class="products__header">
+            <h2 class="products__heading">Популярное</h2>
+            <div class="products__arrows">
+                <button class="products__arrow" aria-label="Назад">‹</button>
+                <span class="products__dots">
+                    <span class="products__dot active"></span>
+                    <span class="products__dot"></span>
+                    <span class="products__dot"></span>
+                </span>
+                <button class="products__arrow" aria-label="Вперёд">›</button>
+            </div>
+        </div>
+
+        <div class="products__grid">
+            <!-- Карточка 1 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар 6">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар 7">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар 8">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар 9">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <!-- Карточка 5 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар 10">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 5. НАША ПРОДУКЦИЯ -->
+<section id="catalog" class="products">
+    <div class="products__container">
+        <div class="products__header">
+            <h2 class="products__heading">Наша продукция</h2>
+        </div>
+
+        <!-- Строка 1 -->
+        <div class="products__grid">
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Строка 2 -->
+        <div class="products__grid">
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Строка 3 -->
+        <div class="products__grid">
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/product.jpg" alt="Товар">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    <p class="product-card__desc">Краткое описание</p>
+                    <p class="product-card__price">1 200 ₽</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Кнопка "Посмотреть все изделия" -->
+        <div class="products__more">
+            <button class="products__more-btn">
+                Посмотреть все изделия
+                <span class="products__more-arrow">▼</span>
+            </button>
+        </div>
+    </div>
+</section>
+<section id="designs" class="designs">
+    <div class="products__container">
+        <div class="products__header">
+            <h2 class="products__heading">Детские дизайны</h2>
+            <div class="products__arrows">
+                <button class="products__arrow" aria-label="Назад">‹</button>
+                <span class="products__dots">
+                    <span class="products__dot active"></span>
+                    <span class="products__dot"></span>
+                    <span class="products__dot"></span>
+                </span>
+                <button class="products__arrow" aria-label="Вперёд">›</button>
+            </div>
+        </div>
+
+        <div class="products__grid">
+            <!-- Карточка 1 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/kiddesign.jpg" alt="Товар 6">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                  
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/kiddesign.jpg" alt="Товар 7">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/kiddesign.jpg" alt="Товар 8">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/kiddesign.jpg" alt="Товар 9">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Карточка 5 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/kiddesign.jpg" alt="Товар 10">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="designs">
+    <div class="products__container">
+        <div class="products__header">
+            <h2 class="products__heading">Женские дизайны</h2>
+            <div class="products__arrows">
+                <button class="products__arrow" aria-label="Назад">‹</button>
+                <span class="products__dots">
+                    <span class="products__dot active"></span>
+                    <span class="products__dot"></span>
+                    <span class="products__dot"></span>
+                </span>
+                <button class="products__arrow" aria-label="Вперёд">›</button>
+            </div>
+        </div>
+
+        <div class="products__grid">
+            <!-- Карточка 1 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/womandesign.jpg" alt="Товар 6">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                  
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/womandesign.jpg" alt="Товар 7">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/womandesign.jpg" alt="Товар 8">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/womandesign.jpg" alt="Товар 9">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Карточка 5 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/womandesign.jpg" alt="Товар 10">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="designs">
+    <div class="products__container">
+        <div class="products__header">
+            <h2 class="products__heading">Мужские дизайны</h2>
+            <div class="products__arrows">
+                <button class="products__arrow" aria-label="Назад">‹</button>
+                <span class="products__dots">
+                    <span class="products__dot active"></span>
+                    <span class="products__dot"></span>
+                    <span class="products__dot"></span>
+                </span>
+                <button class="products__arrow" aria-label="Вперёд">›</button>
+            </div>
+        </div>
+
+        <div class="products__grid">
+            <!-- Карточка 1 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/mandesign.jpg" alt="Товар 6">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                  
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/mandesign.jpg" alt="Товар 7">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/mandesign.jpg" alt="Товар 8">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/mandesign.jpg" alt="Товар 9">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <!-- Карточка 5 -->
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="img/mandesign.jpg" alt="Товар 10">
+                </div>
+                <div class="product-card__dots">
+                    <span class="product-card__dot active"></span>
+                    <span class="product-card__dot"></span>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__name-row">
+                        <p class="product-card__name">Название товара</p>
+                        <button class="product-card__fav" aria-label="В избранное">
+                            <img src="img/fav.png" alt="Избранное">
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  С ЧЕГО НАЧАТЬ -->
+<section class="howtobegin">
+    <div class="howtobegin__container">
+        <h2 class="howtobegin__heading">С чего начать?</h2>
+
+        <div class="howtobegin__row">
+        
+            <div class="howtobegin__text">
+                <p class="howtobegin__intro">Если вы уже...</p>
+                <div class="howtobegin__box">
+                    <p class="howtobegin__subtitle howtobegin__subtitle--bold">выбрали изделие</p>
+                    <p class="howtobegin__desc">и теперь хотите подобрать к нему иллюстрацию</p>
+                </div>
+            </div>
+
+            <div class="howtobegin__arrow">
+                <span class="howtobegin__dots">
+                    <span class="howtobegin__dot"></span>
+                    <span class="howtobegin__dot"></span>
+                </span>
+                <span class="howtobegin__pointer">›</span>
+            </div>
+
+            <div class="howtobegin__image">
+                <img src="img/productcircle.png" alt="Продукция">
+            </div>
+
+            <div class="howtobegin__arrow">
+                <span class="howtobegin__dots">
+                    <span class="howtobegin__dot"></span>
+                    <span class="howtobegin__dot"></span>
+                </span>
+                <span class="howtobegin__pointer">›</span>
+            </div>
+
+            <div class="howtobegin__action">
+                <button class="howtobegin__btn">Вам в каталог продукции</button>
+            </div>
+        </div>
+
+        <div class="howtobegin__row">
+         
+            <div class="howtobegin__text">
+                <p class="howtobegin__intro">Или вы сначала...</p>
+                <div class="howtobegin__box">
+                    <p class="howtobegin__subtitle howtobegin__subtitle--bold">выбрали иллюстрацию</p>
+                    <p class="howtobegin__desc">и хотите посмотреть, как она выглядит на разных изделиях или вам нужно собрать целый набор</p>
+                </div>
+            </div>
+            <div class="howtobegin__arrow">
+                <span class="howtobegin__dots">
+                    <span class="howtobegin__dot"></span>
+                    <span class="howtobegin__dot"></span>
+                </span>
+                <span class="howtobegin__pointer">›</span>
+            </div>
+
+            <div class="howtobegin__image">
+                <img src="img/designcircle.png" alt="Дизайны">
+            </div>
+
+            <div class="howtobegin__arrow">
+                <span class="howtobegin__dots">
+                    <span class="howtobegin__dot"></span>
+                    <span class="howtobegin__dot"></span>
+                </span>
+                <span class="howtobegin__pointer">›</span>
+            </div>
+
+           
+            <div class="howtobegin__action">
+                <button class="howtobegin__btn">Вам в каталог дизайнов</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- МЫ В INSTAGRAM -->
+<section id ="onas" class="instagram">
+    <div class="instagram__container">
+        <h2 class="instagram__heading">Мы в Instagram</h2>
+
+        <div class="instagram__grid">
+            
+            <div class="instagram__item instagram__item--1">
+                <img src="img/img1.png" alt="Instagram 1">
+            </div>
+           
+            <div class="instagram__item instagram__item--2">
+                <img src="img/img2.png" alt="Instagram 2">
+            </div>
+           
+            <div class="instagram__item instagram__item--3">
+                <img src="img/img3.png" alt="Instagram 3">
+            </div>
+            
+            <div class="instagram__item instagram__item--4">
+                <img src="img/img4.png" alt="Instagram 4">
+            </div>
+           
+            <div class="instagram__item instagram__item--5">
+                <img src="img/img5.png" alt="Instagram 5">
+            </div>
+           
+            <div class="instagram__item instagram__item--6">
+                <img src="img/img6.png" alt="Instagram 6">
+            </div>
+        
+            <div class="instagram__item instagram__item--7">
+                <img src="img/img7.png" alt="Instagram 7">
+            </div>
+
+           
+            <div class="instagram__center">
+                <div class="instagram__logo">
+                    <img src="img/instlogo.png" alt="Instagram">
+                </div>
+                <p class="instagram__text">
+                    Подписывайтесь<br>
+                    <a href="https://instagram.com/izumi_market" target="_blank" class="instagram__link">@izumi_market</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ПОДВАЛ -->
+<footer class="footer">
+   
+    <div class="footer__strip">
+        <div class="footer__strip-inner">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+            <img src="img/logofon.png" alt="" class="footer__strip-img">
+        </div>
+    </div>
+
+    <div class="footer__main">
+        <div class="footer__container">
+            <!-- Логотип -->
+             <a href="#">
+            <div class="footer__logo">
+                <img src="img/izumilog.png" alt="Izumi" width="152" height="138">
+            </div>
+</a>
+       
+            <div class="footer__columns">
+              
+                <div class="footer__column">
+                    <h2 class="footer__column-title">Каталог дизайнов</h2>
+                    <ul class="footer__list">
+                        <li><a href="#">Для девочек</a></li>
+                        <li><a href="#">Для женщин</a></li>
+                        <li><a href="#">Для мужчин</a></li>
+                        <li><a href="#">Для взрослых универсальные</a></li>
+                    </ul>
+                    <p class="footer__copyright">© Интернет-магазин Izumi-маркет</p>
+                    
+                </div>
+
+                <div class="footer__column">
+                    <h2 class="footer__column-title">Каталог продукции</h2>
+                    <ul class="footer__list">
+                        <li><a href="#">Термосы</a></li>
+                        <li><a href="#">Керамика</a></li>
+                        <li><a href="#">Пластик</a></li>
+                        <li><a href="#">Металлоизделия</a></li>
+                        <li><a href="#">Текстиль</a></li>
+                    </ul>
+                    <a href="#" class="footer__policy">Политика конфиденциальности</a>
+                </div>
+
+                <div class="footer__column">
+                    <h2 class="footer__column-title">Информация</h2>
+                    <ul class="footer__list">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Сертификаты</a></li>
+                        <li><a href="#">Оплата и доставка</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    <a href="#" class="footer__terms">Пользовательское соглашение</a>
+                </div>
+                <div class="footer__column">
+                    <h2 class="footer__column-title">Мы в соцсетях</h2>
+                    <ul class="footer__list">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">ВКонтакте</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- POP-UP ФОРМА ОБРАТНОЙ СВЯЗИ -->
+<div id="feedback-popup" class="feedback-popup">
+    <div class="feedback-popup__content">
+        <a href="#" class="feedback-popup__close">&times;</a>
+        <div class="feedback-popup__header">
+            <h3 class="feedback-popup__title">Обратная связь</h3>
+            <p class="feedback-popup__subtitle">Напишите нам, и мы обязательно ответим</p>
+        </div>
+        <form class="feedback-popup__form">
+            <div class="feedback-popup__field">
+                <input type="text" placeholder="Ваше имя" required>
+            </div>
+            <div class="feedback-popup__field">
+                <input type="email" placeholder="Email для ответа" required>
+            </div>
+            <div class="feedback-popup__field">
+                <select required>
+                    <option value="" disabled selected>Тема обращения</option>
+                    <option>Заказ и доставка</option>
+                    <option>Вопрос о товаре</option>
+                    <option>Дизайн и персонализация</option>
+                    <option>Сотрудничество</option>
+                    <option>Другое</option>
+                </select>
+            </div>
+            <div class="feedback-popup__field">
+                <textarea rows="4" placeholder="Ваше сообщение..." required></textarea>
+            </div>
+            <label class="feedback-popup__checkbox">
+                <input type="checkbox" required>
+                <span>Я согласен с <a href="#">политикой обработки данных</a></span>
+            </label>
+            <button type="submit" class="feedback-popup__submit">Отправить сообщение</button>
+        </form>
+    </div>
+</div>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
